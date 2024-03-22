@@ -1,0 +1,58 @@
+{
+	"name": "@sapphire/decorators",
+	"version": "2.0.4",
+	"description": "Useful TypeScript decorators for Sapphire Framework Discord bots",
+	"author": "@sapphire",
+	"license": "MIT",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		"import": "./dist/index.js",
+		"require": "./dist/index.js"
+	},
+	"homepage": "https://github.com/sapphire-project/utilities/tree/main/packages/decorators",
+	"scripts": {
+		"test": "jest",
+		"prelint": "yarn test && yarn build",
+		"lint": "eslint src tests --ext ts --fix -c dist/index.js",
+		"build": "tsc -b src",
+		"prepublishOnly": "yarn build"
+	},
+	"peerDependencies": {
+		"@sapphire/framework": "1.x",
+		"@sapphire/pieces": "1.x",
+		"@sapphire/utilities": "1.x",
+		"@types/ws": ">=7",
+		"discord.js": "12.x",
+		"typescript": "4.x"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sapphire-project/utilities.git",
+		"directory": "packages/decorators"
+	},
+	"files": [
+		"dist",
+		"!dist/*.tsbuildinfo"
+	],
+	"engines": {
+		"node": ">=12",
+		"npm": ">=6"
+	},
+	"keywords": [
+		"sapphire-project",
+		"bot",
+		"typescript",
+		"ts",
+		"yarn",
+		"discord",
+		"sapphire",
+		"standalone"
+	],
+	"bugs": {
+		"url": "https://github.com/sapphire-project/utilities/issues"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
